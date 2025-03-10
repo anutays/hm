@@ -1,0 +1,1 @@
+Invoke-WebRequest -URI https://github.com/anutays/TeasingGame/raw/refs/heads/main/Single%20file%20Guide.txt -outfile $env:USERPROFILE/a.txt
