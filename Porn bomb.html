@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Porn bomb</title>
+</head>
+
+</script>
+<body>
+	<center>
+		<h1>Porn bomb</h1>
+		<button style="width: 200px; height: 50px;" onClick="openLinks()">Start</button>
+		<br><br><br>Number of times<br>
+		<input id="numberOfTimes" value="10" />
+		<br><br><br>Interval in milliseconds<br>
+		<input id="interval" value="2000" />
+		<br><br><br>Links (new link on a new line)<br>
+		<textarea id="textArea" rows="5" cols="200"></textarea>
+	</center><br><br>
+	<br>If it doesn't work for you:
+	<br>1. In your browser settings, enable "Pop-ups and redirects"
+	<br>2. Don't set the interval too small
+	<br>3. Try changing your browser
+</body>
+<script>
+	document.getElementById('textArea').value = 'https://censored.booru.org/index.php?page=post&s=random\nhttps://hgoon.booru.org/index.php?page=post&s=random';
+	function openLinks()
+	{
+		var lines = document.getElementById('textArea').value.split('\n');
+		for (var i = 0; i < document.getElementById('numberOfTimes').value; i++)
+		{
+			setTimeout(() => {
+        		window.open(lines[getRandomInt(0, lines.length - 1)], '_blank');
+     		 }, i * document.getElementById('interval').value);
+		}
+	}
+	function getRandomInt(min, max) {
+  		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}	
+</script>
+</html>
